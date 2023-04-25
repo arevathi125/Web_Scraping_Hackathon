@@ -113,7 +113,7 @@ public class VeganPage {
 				}
 			}
 
-			for (int r = 0; r < 2; r++) {
+			for (int r = 0; r < rowSize; r++) {
 
 				System.out.println("---------Recipe------------");
 				System.out.println("---------receipeIDList------------"+receipeIDList.size());
