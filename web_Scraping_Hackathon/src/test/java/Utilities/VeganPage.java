@@ -139,9 +139,6 @@ public class VeganPage {
 				System.out.println("\t*******");
 				System.out.println("Recipe Id : " + recipeID);
 
-				// String recipeCategory =
-				// String foodCategory =
-
 				// Ingredients
 				String ingredients = driver.findElement(By.xpath("//div[@id='rcpinglist']")).getText();
 				System.out.println("\t*******");
@@ -195,15 +192,6 @@ public class VeganPage {
 	    
 	       }
 	       
-	    /* // Elimination list
-	       List<String> eliminatedList = xlRW.readColumnValueList("sheet1",eliminationColumnIndex);
-	       System.out.println("Elimination List: " + eliminatedList);
-	       System.out.println("Before Elimination Ingredient List : " + ingredientsList);
-	       System.out.println("----------------");
-	        ingredientsList.retainAll(eliminatedList);
-	       // ingredientsList = new ArrayList<>();
-	       System.out.println("After Elimination Ingredients List : "+ ingredientsList);   */
-	       
 	       
 	    // Elimination list
 	      // System.out.println(" updatedList   : " +ingredientsList);
@@ -222,12 +210,6 @@ public class VeganPage {
 	       System.out.println("----------------");
 	       System.out.println(" Updated Ingredient List   : " +updatedIngredList);
 	       
-	       // adding List
-	     /*  List<String> addList = xlRW.readColumnValueList("sheet1",addColumnIndex);
-	       ingredientsList.addAll(addList);
-	       System.out.println("After Added : ");
-	       System.out.println("----------------");
-           System.out.println(" Updated Ingredient List   : " +ingredientsList);   */
 
     // adding List
 	        List<String> addList = xlRW.readColumnValueList("sheet1",addColumnIndex);
@@ -236,10 +218,6 @@ public class VeganPage {
 		       System.out.println("----------------");
 	       System.out.println(" updatedList   : " +updatedIngredList);
        
-    /*   // Allergies List
-       List<String> allergyList = xlRW.readColumnValueList("sheet1", 10);
-      //System.out.println("Allergy List Removal Ingredients : "); */
-      
 	       
 	       // Allergies List
 	       List<String> allergyList = xlRW.readColumnValueList("sheet1", 10);
@@ -257,12 +235,6 @@ public class VeganPage {
 	    	   xlRW.setCellData(receipySheetKeyValue, excelDataRow , 4 , updatedIngredList.toString(),true); 
 	       }
 	       
-//	       if (ingredientsList.contains(allergyList) == true) {
-//	    	   xlRW.setCellData(receipySheetKeyValue, excelDataRow , 4 , ingredientsList.toString(),true); 
-//	       }
-//	       else {
-//	    	   xlRW.setCellData(receipySheetKeyValue, excelDataRow , 4 , ingredientsList.toString(),false);
-//	       }
 	       xlRW.setCellData(receipySheetKeyValue, excelDataRow , 5 , prepTime,false);
 		   xlRW.setCellData(receipySheetKeyValue, excelDataRow , 6 , cookTime,false);
 		   xlRW.setCellData(receipySheetKeyValue, excelDataRow , 7 , prepMethod,false);
